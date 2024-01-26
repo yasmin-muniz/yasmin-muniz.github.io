@@ -10,25 +10,39 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #ff3dc; /* Bege */
+            background-color: #9dcc9b; /* Bege mais claro */
         }
 
         header {
-            background-color: #dbb4ad; /* Marrom claro */
-            color: #fff;
+            background-color: #9dcc9b; /* Bege mais claro */
+            color: #000; /* Cor do texto preto */
             text-align: center;
             padding: 1em;
+            display: flex; /* Utiliza um layout flexível */
+            align-items: center; /* Centraliza verticalmente os itens */
+            flex-direction: column; /* Coloca os itens em coluna */
+        }
+
+        header img {
+            border-radius: 50%; /* Adiciona borda arredondada à imagem */
+            max-width: 200px; /* Largura máxima da imagem (dobro) */
+            max-height: 200px; /* Altura máxima da imagem (dobro) */
+            margin-bottom: 20px; /* Adiciona espaço abaixo da imagem */
+        }
+
+        h1, p {
+            margin: 0; /* Remove as margens padrão para garantir o alinhamento correto */
         }
 
         nav {
             display: flex;
             justify-content: center;
-            background-color: #dbb4ad; /* Marrom claro */
+            background-color: #d5e4cf; /* Marrom claro #d5e4cf*/
             padding: 1em;
         }
 
         nav a {
-            color: #fff;
+            color: #000;
             text-decoration: none;
             padding: 0.5em 1em;
             margin: 0 1em;
@@ -36,15 +50,15 @@
 
         section {
             padding: 2em;
-            background-color: #dbb4ad; /* Marrom claro */
+            background-color: #9dcc9b; /* Bege mais claro */
             color: #333; /* Cor do texto em cada seção */
-            border-bottom: 1px solid #ccc; /* Borda para separar as seções */
-			text-align: center; /* Centralizar o texto */
+            border-bottom: 5px solid #d5e4cf; /* Borda para separar as seções */
+            text-align: center; /* Centralizar o texto */
         }
 
         footer {
-            background-color: #dbb4ad; /* Marrom claro */
-            color: #fff;
+            background-color: #d5e4cf; /* Marrom claro */
+            color: #000;
             text-align: center;
             padding: 1em;
         } 
@@ -52,9 +66,10 @@
 </head>
 <body>
     <header>
+        <img src="Imagens/fotoperfil.jpg" alt="Foto de Perfil">
         <h1>Yasmin Muniz Moraes</h1>
-        <p>Desenvolvedora de Banco de Dados</p>
-		<p>Analista de dados</p>
+        <p>Desenvolvedora em Banco de Dados</p>
+        <p>Analista de dados</p>
     </header>
 
     <nav>
@@ -88,18 +103,17 @@
     </section>
 
     <section id="contact">
-    <h2>Contato</h2>
-    <p>Fique à vontade para entrar em contato comigo. Estou disponível via e-mail e nas redes sociais.</p>
+        <h2>Contato</h2>
+        <p></p>
 
-    <!-- Ícone de carta e link 'mailto' -->
-    <a href="mailto:yasminmunizmoraes@hotmail.com" title="Enviar um e-mail">
-        <img src="Imagens/icone_carta.png" alt="Ícone de carta">
-    </a>
-	</section>
+        <!-- Ícone de carta e link 'mailto' -->
+        <a href="mailto:yasminmunizmoraes@hotmail.com?subject=Assunto do E-mail&body=**E-mail enviado pelo link do Portfólio**" title="Enviar um e-mail">
+            <img src="Imagens/icone_carta.png" alt="Ícone de carta">
+        </a>
+    </section>
 
     <footer>
         <p>&copy; 2024 Yasmin Muniz Moraes - Portfólio</p>
     </footer>
 </body>
 </html>
-
