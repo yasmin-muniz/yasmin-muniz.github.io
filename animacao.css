@@ -1,0 +1,291 @@
+
+                                /*BACKGROUND*/
+body {
+    font-family: Open Sans;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #4b7679; /* COR DO FUNDA DAS QUALIFICAÇÕES */  
+    color: #ffffff;/* COR DA LETRA DO MENU */
+    
+}
+
+header {
+    background-color: #4b7679; /* COR DO FUNDO DA FOTO */
+    color: #ffffff; /* COR DO TEXTO DO NOME */
+    text-align: center;
+    padding: 1em;
+    display: flex; /* Utiliza um layout flexível */
+    align-items: center; /* Centraliza verticalmente os itens */
+    flex-direction: column; /* Coloca os itens em coluna */
+    margin-top: 50px; /* Adiciona espaço acima do cabeçalho */
+}
+
+/* TAMANHO DA FOTO DE PERFIL */
+header img { 
+    border-radius: 50%; /* Adiciona borda arredondada à imagem */
+    max-width: 300px; /* Largura máxima da imagem (dobro) */
+    max-height: 300px; /* Altura máxima da imagem (dobro) */
+    margin-bottom: 20px; /* Adiciona espaço abaixo da imagem */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #4b7679; /* COR DO FUNDO DO MENU */
+    text-align: center;
+    padding: 1em;
+    z-index: 1000; /* Para garantir que o menu fique acima de outros elementos */
+    transition: top 0.3s; /* Adiciona uma transição suave */
+    border-bottom: 2px solid white; /* Adiciona uma borda branca na parte inferior */
+}
+nav a {
+    color: #ffffff;/* COR DA LETRA DO MENU */
+    text-decoration: none;
+    padding: 0.5em 1em;
+    margin: 0 1em;
+}
+
+
+#navbar.hidden {
+    top: -100px; /* Move o menu para cima, escondendo-o */
+}
+
+/* MENU */
+
+h1, p {
+    margin: 0; /* Remove as margens padrão para garantir o alinhamento correto */
+}
+
+h2 {
+    font-size: 30px; /* Tamanho da fonte do título das seções */
+}
+
+h3 {
+    font-size: 22px; /* Tamanho da fonte do título das seções */
+}
+
+h4 {
+    font-size: 17px; /* Tamanho da fonte do título das seções */
+}
+
+h3, h4 {
+    margin: 0; /* Remove as margens padrão para garantir o alinhamento correto */
+}
+
+section {
+    padding: 2em;
+    border-bottom: 5px solid #ffffff; /* Borda para separar as seções */
+    text-align: center; /* Centralizar o texto */
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto; /* Centralizar o conteúdo */
+    padding: 20px;
+}
+
+/* Layout flexível dentro de uma seção */
+.section-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+#about {
+    text-align: center; /* Centraliza o texto dentro da seção */
+    font-size: 18px; /* Ajusta o tamanho do texto */
+    border-bottom: 5px solid #ffffff; /* Borda na parte inferior */
+    padding: 2em 0; /* Adiciona padding apenas na parte superior e inferior */
+}
+
+.about-wrapper {
+    margin: 0 20%; /* Margens esquerda e direita para centralizar */
+}
+
+
+
+#about p {
+    text-align: justify; /* Alinha os parágrafos justificados */
+    margin: 20px auto; /* Adiciona espaçamento entre os parágrafos e centraliza horizontalmente */
+    text-indent: 1em; /* Destaca a primeira linha de cada parágrafo */
+    font-size: 20px; /* Ajusta o tamanho do texto */
+}
+
+
+
+
+#contact {
+    background-color: #4b7679; /* Define o fundo como branco */
+    color: #ffffff; /* Define a cor do texto como preto */ 
+    height: 60px; /* Define a altura da seção */
+}
+
+#contact h2 {
+    margin-top: -20px; /* Reduz a margem superior do título */
+}
+
+
+.item {
+    width: 48%; /* Dois itens por linha */
+    margin-bottom: 20px;
+}
+
+/* Media queries para ajustar o layout em tamanhos menores de tela */
+@media screen and (max-width: 768px) {
+    .item {
+        width: 100%; /* Um item por linha em telas menores */
+    }
+}
+
+footer {
+    background-color: #4b7679; /* Marrom claro */
+    color: #ffffff;
+    text-align: center;
+    padding: 1em;
+} 
+
+   /* SESSAO QUALIFICACOES */
+.qualificacoes-container p {
+    text-align: justify; /* Alinha o texto à esquerda */
+}
+ 
+/* BOTOES QUALIFICACOES */
+.botao-educacional, .botao-experiencia {
+    display: block;
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 50px;
+    background-color: #f9f9fa; /* Cor do botão */
+    color: #000000; /* Cor do texto */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.qualificacoes-container {
+    width: 45%;
+    margin-top: 0px;
+    margin-right: 1%;
+    padding-right: 20px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: justify;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+
+
+.qualificacoes-container h3,.qualificacoes-container h4, .qualificacoes-container span, .qualificacoes-container li {
+    text-align: center; /* Alinha o texto do resumo à esquerda */
+}
+ 
+.botoes-container {
+display: flex; /* Torna o contêiner um flex container */
+justify-content: space-between; /* Distribui os itens horizontalmente */
+margin-bottom: 0px; /* Adiciona espaço abaixo dos botões */
+}
+.botoes-container button {
+margin-right: 20px; /* Ajuste a margem conforme necessário */
+}
+
+
+/* CERTIFICACOES E CURSOS */
+
+#certificados-cursos {
+    display: flex;
+    flex-wrap: wrap; /* Adiciona quebra de linha conforme necessário */
+    justify-content: space-around; /* Distribui os itens horizontalmente */
+    margin-bottom: 50px; /* Adiciona espaço entre a seção de certificados e cursos */
+}
+
+.certificados, .cursos {
+    display: flex; /* Adicionado para manter os botões e o texto alinhados verticalmente */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    border: 5px solid transparent;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+    padding: 30px;
+    margin-bottom: 20px; /* Adiciona espaço entre os certificados/cursos */
+    max-width: 45%; /* Define uma largura máxima responsiva */
+    flex: 1; /* Permite que os itens se expandam conforme necessário */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+
+.certificados h3, 
+.cursos h3 {
+    font-size: 25px; /* Tamanho da fonte */
+    margin: 0; /* Remove as margens padrão */
+    margin-bottom: 30px; /* Defina o valor desejado para a margem inferior */ 
+}
+
+.certificado h4,
+.curso h4 {
+    font-size: 18px; /* Tamanho da fonte */
+    margin-bottom: 5px; /* Adiciona espaço entre o título e o texto */
+    /* Largura removida para permitir que o título seja responsivo */
+}
+
+.certificado p,
+.curso p {
+    margin-bottom: 30px; /* Adiciona espaço entre o texto e os botões */ 
+}
+
+    /*SETAS*/
+.certificados button.cert-prev, .certificados button.cert-next, .cursos button.curso-prev, .cursos button.curso-next {
+    font-size: 40px; /* Tamanho da fonte das setas */
+    color: #ffffff; /* Cor das setas */
+    cursor: pointer; /* Cursor do mouse em forma de mão ao passar sobre os botões */  
+    border: none; /* Remove a borda dos botões */
+    background-color: transparent; /* Fundo transparente para os botões */ 
+    margin-right: 100px;
+    margin-left: 100px;
+        
+        
+}
+
+.certificados button.ver-certificado, .cursos button.ver-certificado {
+    font-size: 20px; /* Define o tamanho da fonte */
+    padding: 10px 20px; /* Define o preenchimento interno do botão */
+    background-color: #ffffff; /* Define a cor de fundo do botão */
+    color: #000000; /* Define a cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    cursor: pointer; /* Altera o cursor ao passar sobre o botão */
+    border-radius: 5px; /* Adiciona bordas arredondadas nas laterais  */
+}
+
+.certificados1, .cursos1 { 
+    display: flex;     
+}
+
+
+/* FAZER A BORDA FICAR RGB */
+@keyframes pulse {
+    0% {
+        border-color: #fff;
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    50% {
+        border-color: #fff;
+        box-shadow: 0 0 0 5px rgba(108, 124, 233, 0);
+    }
+    100% {
+        border-color: #fff;
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+.certificados:hover,
+.cursos:hover {
+    animation: pulse 1s infinite;
+}
+

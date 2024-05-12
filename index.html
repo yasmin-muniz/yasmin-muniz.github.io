@@ -1,119 +1,222 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yasmin Muniz - Portfólio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #9dcc9b; /* Bege mais claro */
-        }
+        <head>
+            <script src="script.js"></script>
+            <link rel="stylesheet" href="animacao.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-gUD6e8Ztd3Axp4uprLsNLVVBzI1jEEXzrJEy5ZZBmKib8L1O6j3kQTVusPpF0rtX" crossorigin="anonymous">
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Yasmin Muniz - Portfólio</title>
+        </head>
+        <body> 
+            <header>
+                <img src="Imagens/fotoperfil.png" alt="Foto de Perfil">
+                <h1>Yasmin Muniz Moraes</h1> 
+                <p> <b> Desenvolvedora em Banco de Dados </b></p>
+                <p> <b> Analista de dados </b></p>
+            </header>
 
-        header {
-            background-color: #9dcc9b; /* Bege mais claro */
-            color: #000; /* Cor do texto preto */
-            text-align: center;
-            padding: 1em;
-            display: flex; /* Utiliza um layout flexível */
-            align-items: center; /* Centraliza verticalmente os itens */
-            flex-direction: column; /* Coloca os itens em coluna */
-        }
+            
+                        <!-- MENU TOPO -->
+                <nav id="navbar">
+                    <a href="#about">Minha História</a>
+                    <a href="#qualificacoes">Qualificações</a>
+                    <a href="#certificados_cursos">Certificações e Cursos</a>
+                    <a href="#portfolio">Portfólio</a>
+                    <a href="#contact">Contatos</a> 
+                </nav>
+            <section>
+            </section>
 
-        header img {
-            border-radius: 50%; /* Adiciona borda arredondada à imagem */
-            max-width: 200px; /* Largura máxima da imagem (dobro) */
-            max-height: 200px; /* Altura máxima da imagem (dobro) */
-            margin-bottom: 20px; /* Adiciona espaço abaixo da imagem */
-        }
 
-        h1, p {
-            margin: 0; /* Remove as margens padrão para garantir o alinhamento correto */
-        }
+                <!-- PAGINA INICIAL -->
+            <section id="about">
+                <div class="about-wrapper">
+                    <h2>Minha História</h2>
+                    <p>Pode-se dizer que minha história na área de tecnologia começou lá em 2010 de forma despretensiosa quando decidi cursar um ensino médio técnico focado na área de TI. Me vi em um dia qualquer do meu 2º ano de curso adquirindo um grande interesse por bancos de dados. Após concluir meu ensino médio, estava decidida a ingressar em um curso na faculdade que estivesse de acordo com o que já vinha estudando desde então e em 2013 escolhi ingressar em Análise e Desenvolvimento de Sistemas. Minha jornada profissional teve início em 2014, e apesar de não começar trabalhando diretamente com bancos de dados, eles estavam sempre presentes nos projetos e execuções do dia a dia.</p>
+                    <p>Ao longo dos anos, meu interesse pela linguagem SQL tornou-se cada vez mais evidente, e decidi então concentrar meus esforços nessa área fascinante. Em 2017, dei um passo adiante ao embarcar em uma pós-graduação em Banco de Dados, imergindo-me profundamente nos complexos aspectos deste domínio.</p>
+                    <p>Tive minha virada de chave para trabalhar como desenvolvedora de bancos de dados em 2021, e não anulando as demais experiências, posso afirmar que essa experiência em específico não apenas reforçou meu amor pelos dados, mas também me motivou ainda mais a explorar e compreender suas potencialidades e complexidades. Isso me levou a mergulhar na área de dados e a "esbarrar" em outras áreas, como a de análise de dados. Reconhecendo as sinergias entre essas áreas, decidi estudar mais sobre buscando expandir minha expertise.</p>
+                    <p>Minha jornada de autodescoberta e autoconhecimento profissional constantemente me faz desafiar a mim mesma, buscando adquirir novos conhecimentos e habilidades para enfrentar os desafios emergentes nesse vasto mundo dos dados. Então, aqui estou eu, mergulhada no mundo da TI, vivendo e respirando dados. Com uma base sólida e uma paixão que só cresce, estou pronta para enfrentar os desafios que o mundo tem para me apresentar. E mal posso esperar por isso!</p>
+                </div>
+            </section>
+        
 
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #d5e4cf; /* Marrom claro #d5e4cf*/
-            padding: 1em;
-        }
+    
+            <!-- QUALIFICACOES -->
+            <section id="qualificacoes"> 
+                <h2>Qualificações</h2>
+                <div class="botoes-container">
+                    <button class="botao-educacional" onclick="toggleEducacao()">Educação</button>
+                    <button class="botao-experiencia" onclick="toggleExperiencia()">Experiência</button>
+                </div>
+                <div id="conteudo-educacao" style="display: none;">
+                    <div class="qualificacoes-container">
+                        <h3> <li>Pós Graduação em Administração em Banco de Dados</li></h3>
+                        <h4><span>Universidade Estácio de Sá | 2017 –2019</span></h4>
+                    </div>
+                    <div class="qualificacoes-container">
+                        <h3> <li>Ensino Superior em Análise e Desenvolvimento de Sistemas</li></h3>
+                        <h4><span>Universidade Estácio de Sá | 2013 -2015</span></h4>
+                    </div>
+                    <div class="qualificacoes-container">
+                        <h3> <li>Ensino Médio em Técnico em Informática</li></h3>
+                        <h4><span>Colégio Luso Carioca | 2010 –2012</span></h4>
+                    </div>
+                </div>     
+                <!-- Conteúdo da Experiência -->
+                <div id="conteudo-experiencia" style="display: none;">
+                    <div class="qualificacoes-container"> 
+                        <h3> Analista de Banco de Dados </h3>
+                        <h4><span>Confitec | Março 2021 até o presente</span></h4>
+                            
+                        <ul>
+                            <p>
+                                Atuo na área de projetos, realizando a manutenção e/ou criação de tabelas, relacionamentos, scripts SQL/PL-SQL e T-SQL, análises para melhoria de desempenho dos processos, transferência de dados entre bases (Oracle x SQL Server), versionamento de scripts para as atualizações da base de dados em ambientes de homologação/produção que são realizadas através de chamados criados no Service Manager dos clientes e criação de documentos para melhorias do processos internos ou para passagem de conhecimento do projeto em si.
+                            </p>
+                        </ul>
+                    </div>            
+                    <div class="qualificacoes-container">
+                        <h3>Analista de Banco de Dados</h3>
+                        <h4><span>Fadami | Setembro 2019 até Março 2021</span></h4>
+                        <ul>
+                            <p>
+                                Realizei levantamento e mapeamento de requisitos e entidades baseando-se na regra de negócio,
+                                modelagem do banco, manutenção e criação de tabelas e relacionamentos, manutenção e criação de 
+                                scripts SQL/T-SQL, criação e permissão de usuários, backup, restore e comparação entre bases 
+                                de dados, gerenciamento de scripts de atualizações de base para ambientes de homologação/produção,
+                                testes de utilização do software e validação de requisitos desenvolvidos, suporte aos usuários 
+                                dos projetos em âmbito de homologação.
+                            </p>
+                        </ul>
+                    </div> 
 
-        nav a {
-            color: #000;
-            text-decoration: none;
-            padding: 0.5em 1em;
-            margin: 0 1em;
-        }
+                    <div class="qualificacoes-container">
+                        <h3>Consultora Técnica</h3>
+                        <h4><span>Tecnoarte | Setembro 2018 até Setembro 2019</span></h4>
+                        <ul>
+                            <p>
+                                Atuei como consultora de implantação do sistema e em projetos de reestruturação, participando nas tomadas de decisão com o PMO, realizando o mapeamento de fluxo de processos para uma melhor adequação do sistema à rotina de trabalho do cliente, ministrando treinamentos sobre a funcionalidade do mesmo e realizando criações de dashboard e relatórios pelo software MyBi para uma melhor tomada de decisão da empresa.
+                            </p>
+                        </ul>
+                    </div> 
 
-        section {
-            padding: 2em;
-            background-color: #9dcc9b; /* Bege mais claro */
-            color: #333; /* Cor do texto em cada seção */
-            border-bottom: 5px solid #d5e4cf; /* Borda para separar as seções */
-            text-align: center; /* Centralizar o texto */
-        }
+                    <div class="qualificacoes-container">
+                        <h3>Estagiária de TI</h3>
+                        <h4><span>Polícia Federal do Estado do RJ | Maio 2018 até Setembro 2018</span></h4>
+                        <ul>
+                            <p>
+                                Atuei realizando auxílio em atividades de apoio aos Peritos Criminais na realização de exames em computadores, dispositivos, redes e sistemas. Em paralelo, auxílio em projeto desenvolvido na linguagem Java que permitirá a otimização dos trabalhos realizados pela equipe.
+                            </p>
+                        </ul>
+                    </div> 
 
-        footer {
-            background-color: #d5e4cf; /* Marrom claro */
-            color: #000;
-            text-align: center;
-            padding: 1em;
-        } 
-    </style>
-</head>
-<body>
-    <header>
-        <img src="Imagens/fotoperfil.jpg" alt="Foto de Perfil">
-        <h1>Yasmin Muniz Moraes</h1>
-        <p>Desenvolvedora em Banco de Dados</p>
-        <p>Analista de dados</p>
-    </header>
+                    <div class="qualificacoes-container">
+                        <h3>Analista de Suporte</h3>
+                        <h4><span>PDVNet Inteligência em Sistemas| Maio 2014 até Agosto 2016</span></h4>
+                        <ul>
+                            <p>
+                                Atuei com a realização de suporte ao cliente via telefone e remotamente, solucionando problemas e dúvidas dos mesmos, atuando com o sistema da empresa (PDV e o seu sistema interno), sistema de atendimento remoto e banco de dados SQL Server 2008, 2012 e 2014.
+                                Criação de ambiente para teste de software a fim de solucionar um problema ou encaminhá-los para o desenvolvimento.
+                                Conhecimentos adquiridos na parte da Área Fiscal de uma empresa voltada para o comércio ( NF, NFE, NFCE, DP, Faturamento, Impressoras Fiscais/não Fiscais/Normais/Etiqueta .. ETC).
+                            </p>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+    
+    
+    
+            <!-- CERTIFICACOES E CURSOS -->
+            <!-- Limpar floats -->
+            <div style="clear: both;"></div>
+            <section id="certificados_cursos">
+                <h2>Certificações & Cursos</h2> 
+                <div id="certificados-cursos">
+                
+                    
+                    <div class="certificados"> 
+                        <h3>Certificações</h3>
+                        <div class="certificados1">     
+                            <button class="cert-prev">&#9664;</button>
+                            
+                        
+                            <div class="certificado">
+                                <h4>Oracle PLSQL- Especialista do Básico ao Avançado</h4>
+                                <p>Udemy - Novembro 2022</p>
+                                <button class="ver-certificado" onclick="window.open('Certificados\Oracle plsql- Especialista do basico ao avançado 2022.pdf')">Ver Certificado</button>
+                            </div>
+                            
 
-    <nav>
-        <a href="#home">Página Inicial</a>
-        <a href="#about">Sobre Mim</a>
-        <a href="#portfolio">Portfólio</a>
-        <a href="#resume">Currículo</a>
-        <a href="#contact">Contato</a>
-    </nav>
+                            <div class="certificado">
+                                <h4>Oracle 12C PL/SQL</h4>
+                                <p>32 horas - Training</p>
+                                <button class="ver-certificado" onclick="window.open('Certificados\Oracle plsql- Especialista do basico ao avançado 2022.pdf')">Ver Certificado</button>
+                            </div>
+                            <div class="certificado">
+                                <h4>MYSQL</h4>
+                                <p>40 horas - Curso em Vídeo</p>
+                                <button class="ver-certificado" onclick="window.open('Certificados\Oracle plsql- Especialista do basico ao avançado 2022.pdf')">Ver Certificado</button>
+                            </div>
+                            <button class="cert-next">&#9654;</button>
+                        </div>
+                    </div>
+                
+                    <div class="cursos">  
+                        <h3>Cursos</h3>
+                        <div class="cursos1">
+                            <button class="curso-prev">&#9664;</button> 
+                            <div class="curso">
+                                <h4>Curso de Python</h4>
+                                <p>40 horas - Udemy</p>
+                                <button class="ver-certificado" onclick="window.open('Certificados\Oracle plsql- Especialista do basico ao avançado 2022.pdf')">Ver Certificado</button>
+                            </div>
+                            <div class="curso">
+                                <h4>Curso de Machine Learning</h4>
+                                <p>60 horas - Coursera</p>
+                                <button class="ver-certificado" onclick="window.open('Certificados\Oracle plsql- Especialista do basico ao avançado 2022.pdf')">Ver Certificado</button>
+                            </div>
+                            <div class="curso">
+                                <h4>Curso de Data Science</h4>
+                                <p>80 horas - edX</p>
+                                <button class="ver-certificado" onclick="window.open('Certificados\Oracle plsql- Especialista do basico ao avançado 2022.pdf')">Ver Certificado</button>
+                            </div> 
+                            <button class="curso-next">&#9654;</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <section id="home">
-        <h2>Página Inicial</h2>
-        <p>Bem-vindo ao meu portfólio online. Aqui você encontrará informações sobre meus projetos e experiências.</p>
-    </section>
 
-    <section id="about">
-        <h2>Sobre Mim</h2>
-        <p>Eu sou um desenvolvedor web apaixonado por criar soluções inovadoras. Possuo experiência em...</p>
-    </section>
 
-    <section id="portfolio">
-        <h2>Portfólio</h2>
-        <p>Aqui estão alguns dos meus projetos recentes:</p>
-        <!-- Adicione seus projetos aqui -->
-    </section>
+            <!-- CONTATOS -->
+            <section id="contact">
+                <h2>Contatos</h2> 
+            
+                <button onclick="window.open('C:/Users/Yasmin/yasmin-muniz.github.io/Curriculo/Yasmin_Muniz.pdf', '_blank')" class="group flex justify-center p-2 rounded-md drop-shadow-xl bg-gradient-to-r from-gray-800 to-black text-white font-semibold hover:translate-y-3 transition-all duration-500 hover:from-[#331029] hover:to-[#310413] animate-hover-opacity" style="overflow: hidden;">
+                    <img src="C:/Users/Yasmin/yasmin-muniz.github.io/Imagens/Aprovado.png" alt="Ícone de PDF" class="w-5 mr-2" style="width: 20px; height: 20px;">
+                    <span class="absolute opacity-0 group-hover:opacity-100 group-hover:text-gray-700 group-hover:text-sm group-hover:-translate-y-10 duration-700">Curriculo</span>
+                </button>
+        
+                
+                <button onclick="window.open('https://github.com/yasmin-muniz', '_blank')" class="group flex justify-center p-2 rounded-md drop-shadow-xl bg-gradient-to-r from-gray-800 to-black text-white font-semibold hover:translate-y-3 transition-all duration-500 hover:from-[#331029] hover:to-[#310413] animate-hover-opacity" style="overflow: hidden;">
+                    <svg class="w-5" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                        <path d="M7.49933 0.25C3.49635 0.25 0.25 3.49593 0.25 7.50024C0.25 10.703 2.32715 13.4206 5.2081 14.3797C5.57084 14.446 5.70302 14.2222 5.70302 14.0299C5.70302 13.8576 5.69679 13.4019 5.69323 12.797C3.67661 13.235 3.25112 11.825 3.25112 11.825C2.92132 10.9874 2.44599 10.7644 2.44599 10.7644C1.78773 10.3149 2.49584 10.3238 2.49584 10.3238C3.22353 10.375 3.60629 11.0711 3.60629 11.0711C4.25298 12.1788 5.30335 11.8588 5.71638 11.6732C5.78225 11.205 5.96962 10.8854 6.17658 10.7043C4.56675 10.5209 2.87415 9.89918 2.87415 7.12104C2.87415 6.32925 3.15677 5.68257 3.62053 5.17563C3.54576 4.99226 3.29697 4.25521 3.69174 3.25691C3.69174 3.25691 4.30015 3.06196 5.68522 3.99973C6.26337 3.83906 6.8838 3.75895 7.50022 3.75583C8.1162 3.75895 8.73619 3.83906 9.31523 3.99973C10.6994 3.06196 11.3069 3.25691 11.3069 3.25691C11.7026 4.25521 11.4538 4.99226 11.3795 5.17563C11.8441 5.68257 12.1245 6.32925 12.1245 7.12104C12.1245 9.9063 10.4292 10.5192 8.81452 10.6985C9.07444 10.9224 9.30633 11.3648 9.30633 12.0413C9.30633 13.0102 9.29742 13.7922 9.29742 14.0299C9.29742 14.2239 9.42828 14.4496 9.79591 14.3788C12.6746 13.4179 14.75 10.7025 14.75 7.50024C14.75 3.49593 11.5036 0.25 7.49933 0.25Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="absolute opacity-0 group-hover:opacity-100 group-hover:text-gray-700 group-hover:text-sm group-hover:-translate-y-10 duration-700">GitHub</span>
+                </button>
+            
 
-    <section id="resume">
-        <h2>Currículo</h2>
-        <p>Confira meu currículo para obter mais detalhes sobre minha formação e experiência.</p>
-        <!-- Adicione links para o seu currículo aqui -->
-    </section>
+                <button onclick="window.open('https://www.linkedin.com/in/yasminmmoraes/', '_blank')" class="group relative flex justify-center items-center p-2 rounded-md drop-shadow-xl bg-[#0077b5] from-gray-800 text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 hover:from-[#331029] hover:to-[#310413] animate-hover-opacity" style="overflow: hidden;">
+                    <svg class="w-5 h-5 fill-current text-white" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                        <path d="M444.17 32H70.28C49.85 32 32 46.7 32 66.89v374.72C32 461.91 49.85 480 70.28 480h373.78c20.54 0 35.94-18.21 35.94-38.39V66.89C480.12 46.7 464.6 32 444.17 32zm-273.3 373.43h-64.18V205.88h64.18zM141 175.54h-.46c-20.54 0-33.84-15.29-33.84-34.43 0-19.49 13.65-34.42 34.65-34.42s33.85 14.82 34.31 34.42c-.01 19.14-13.31 34.43-34.66 34.43zm264.43 229.89h-64.18V296.32c0-26.14-9.34-44-32.56-44-17.74 0-28.24 12-32.91 23.69-1.75 4.2-2.22 9.92-2.22 15.76v113.66h-64.18V205.88h64.18v27.77c9.34-13.3 23.93-32.44 57.88-32.44 42.13 0 74 27.77 74 87.64z"/>
+                    </svg>
+                    <span class="absolute opacity-0 group-hover:opacity-100 group-hover:text-gray-700 group-hover:text-sm group-hover:-translate-y-10 duration-700">Linkedin</span>
+                </button>
+            </section>
 
-    <section id="contact">
-        <h2>Contato</h2>
-        <p></p>
 
-        <!-- Ícone de carta e link 'mailto' -->
-        <a href="mailto:yasminmunizmoraes@hotmail.com?subject=Assunto do E-mail&body=**E-mail enviado pelo link do Portfólio**" title="Enviar um e-mail">
-            <img src="Imagens/icone_carta.png" alt="Ícone de carta">
-        </a>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Yasmin Muniz Moraes - Portfólio</p>
-    </footer>
-</body>
+            <footer>
+                <p>&copy; 2024 Yasmin Muniz Moraes - Portfólio</p>
+            </footer>
+        </body>
 </html>
