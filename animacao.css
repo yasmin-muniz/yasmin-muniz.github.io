@@ -42,6 +42,7 @@ header img {
     z-index: 1000; /* Para garantir que o menu fique acima de outros elementos */
     transition: top 0.3s; /* Adiciona uma transição suave */
     border-bottom: 2px solid white; /* Adiciona uma borda branca na parte inferior */
+    font-size: 20px; /* Tamanho da fonte */
 }
 nav a {
     color: #ffffff;/* COR DA LETRA DO MENU */
@@ -124,7 +125,7 @@ section {
 #contact {
     background-color: #4b7679; /* Define o fundo como branco */
     color: #ffffff; /* Define a cor do texto como preto */ 
-    height: 60px; /* Define a altura da seção */
+    height: 45px; /* Define a altura da seção */
 }
 
 #contact h2 {
