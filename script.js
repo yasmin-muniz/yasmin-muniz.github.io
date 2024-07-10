@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Mostrar o primeiro certificado e curso ao carregar a página
+    /////////////// Mostrar o primeiro certificado e curso ao carregar a página
     showCert(certIndex);
     showCurso(cursoIndex);
 
@@ -75,33 +75,70 @@ window.addEventListener("scroll", function() {
 }, false);
 
 
-///////////// BOTAO EXPERIENCIAS E EDUCACAO
-function toggleEducacao() {
-    var conteudoEducacao = document.getElementById("conteudo-educacao");
-    var conteudoExperiencia = document.getElementById("conteudo-experiencia");
-    
-    // Se o conteúdo de educação está oculto, exibe e oculta o conteúdo de experiência
-    if (conteudoEducacao.style.display === "none") {
-        conteudoEducacao.style.display = "block";
-        conteudoExperiencia.style.display = "none"; // Oculta o conteúdo de experiência
-    } else {
-        conteudoEducacao.style.display = "none"; // Oculta o conteúdo de educação se já estiver visível
+//////////////// BOTAO EXPERIENCIAS E EDUCACAO
+
+ 
+
+
+ document.addEventListener('DOMContentLoaded', function() {
+    const btnEducacao = document.querySelector('.botao-educacional');
+    const btnExperiencia = document.querySelector('.botao-experiencia');
+    const conteudoEducacao = document.getElementById('conteudo-educacao');
+    const conteudoExperiencia = document.getElementById('conteudo-experiencia');
+
+    window.toggleEducacao = function() {
+        // Se o conteúdo de educação está oculto, exibe e oculta o conteúdo de experiência
+        if (conteudoEducacao.style.display === "none") {
+            conteudoEducacao.style.display = "block";
+            conteudoExperiencia.style.display = "none"; // Oculta o conteúdo de experiência
+            setActiveButton(btnEducacao);
+        } else {
+            conteudoEducacao.style.display = "none"; // Oculta o conteúdo de educação se já estiver visível
+            btnEducacao.classList.remove('active');
+        }
     }
+
+    window.toggleExperiencia = function() {
+        // Se o conteúdo de experiência está oculto, exibe e oculta o conteúdo de educação
+        if (conteudoExperiencia.style.display === "none") {
+            conteudoExperiencia.style.display = "block";
+            conteudoEducacao.style.display = "none"; // Oculta o conteúdo de educação
+            setActiveButton(btnExperiencia);
+        } else {
+            conteudoExperiencia.style.display = "none"; // Oculta o conteúdo de experiência se já estiver visível
+            btnExperiencia.classList.remove('active');
+        }
+    }
+
+    function setActiveButton(activeButton) {
+        // Remove a classe 'active' de ambos os botões
+        btnEducacao.classList.remove('active');
+        btnExperiencia.classList.remove('active');
+        // Adiciona a classe 'active' ao botão clicado
+        activeButton.classList.add('active');
+    }
+});
+
+
+
+//////////////// PAGINA BOOTCAMP -- BOTAO VER DETALHES 
+ 
+
+function openModal(title, description, link1, link2) {
+    document.getElementById("modal-title").innerText = title;
+    document.getElementById("modal-description").innerText = description;
+    document.getElementById("modal-button-1").onclick = function() {
+        window.location.href = link1;
+    };
+    document.getElementById("modal-button-2").onclick = function() {
+        window.location.href = link2;
+    };
+    document.getElementById("myModal").style.display = "block";
 }
 
-function toggleExperiencia() {
-    var conteudoExperiencia = document.getElementById("conteudo-experiencia");
-    var conteudoEducacao = document.getElementById("conteudo-educacao");
-    
-    // Se o conteúdo de experiência está oculto, exibe e oculta o conteúdo de educação
-    if (conteudoExperiencia.style.display === "none") {
-        conteudoExperiencia.style.display = "block";
-        conteudoEducacao.style.display = "none"; // Oculta o conteúdo de educação
-    } else {
-        conteudoExperiencia.style.display = "none"; // Oculta o conteúdo de experiência se já estiver visível
-    }
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
 }
-
 
 
 

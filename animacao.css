@@ -1,18 +1,114 @@
 
                                 /*BACKGROUND*/
-body {
-    font-family: Open Sans;
+ /* ---------------------------------------------------------------------------------*/                               
+ @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Playwrite+IT+Moderna:wght@100..400&family=Yeseva+One&display=swap" rel="stylesheet');
+
+ 
+ :root {
+    --cor-primaria: #1a1a1a;
+    --cor-secundaria: #b1b3b3;
+    --cor-terciaria: #e9e9e9a9;
+    --cor-hover: #6c6d6d;
+
+    --fonte-primaria: 'Jura', normal;
+    --fonte-secundaria: 'Jura', normal;
+}
+ 
+
+ body {
+    font-family: var(--fonte-secundaria);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #4b7679; /* COR DO FUNDA DAS QUALIFICAÇÕES */  
-    color: #ffffff;/* COR DA LETRA DO MENU */
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
     
 }
 
+h1 {
+    font-size: 40px; /* Tamanho dentro dos botões qualificação */
+    color: var(--cor-secundaria);
+
+}
+
+h2 {
+    font-size: 35px; /* Tamanho da fonte do título das seções */
+    font-family: var(--fonte-primaria);
+    color: var(--cor-secundaria);
+}
+
+h3 {
+    font-size: 20px; /* Tamanho dentro dos botões qualificação */
+    font-family: var(--fonte-primaria);
+    color: var(--cor-secundaria);
+}
+
+h4 {
+    font-size: 17px; /* Tamanho dentro dos botões qualificação  */
+}
+
+h1, p, h3, h4 {
+    margin: 0; /* Remove as margens padrão para garantir o alinhamento correto */
+}
+
+ 
+
+section {
+    padding: 2em;
+    border-bottom: 5px solid #ffffff; /* Borda para separar as seções */
+    text-align: center; /* Centralizar o texto */
+}
+
+.item {
+    width: 48%; /* Dois itens por linha */
+    margin-bottom: 20px;
+}
+
+/* Media queries para ajustar o layout em tamanhos menores de tela */
+@media screen and (max-width: 768px) {
+    .item {
+        width: 100%; /* Um item por linha em telas menores */
+    }
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto; /* Centralizar o conteúdo */
+    padding: 20px;
+}
+
+/* Layout flexível dentro de uma seção */
+.section-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* cor do fundo dos botões */
+button:hover {
+    background-color: var(--cor-hover);
+}
+ 
+.botoes-container {
+    display: flex; /* Torna o contêiner um flex container */
+    justify-content: space-between; /* Distribui os itens horizontalmente */
+    margin-bottom: 0px; /* Adiciona espaço abaixo dos botões */
+    }
+
+
+.botoes-container button {
+    margin-right: 20px; /* Ajuste a margem conforme necessário */
+    }
+
+
+.certificados button.ver-certificado:hover , .cursos button.ver-certificado:hover, .project-overlay-bootcamp button.ver-projetos:hover, .project-overlay button.ver-projetos:hover  {
+        background-color: var(--cor-hover);
+    }
+
+                                /*FOTO DE PERFIL E NOME */
+/* ---------------------------------------------------------------------------------*/      
+
 header {
-    background-color: #4b7679; /* COR DO FUNDO DA FOTO */
-    color: #ffffff; /* COR DO TEXTO DO NOME */
     text-align: center;
     padding: 1em;
     display: flex; /* Utiliza um layout flexível */
@@ -31,12 +127,14 @@ header img {
     flex-wrap: wrap;
 }
 
+                                /* TOPO COM AS ABAS DA PAGINA */
+/* ---------------------------------------------------------------------------------*/ 
+
 #navbar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    background-color: #4b7679; /* COR DO FUNDO DO MENU */
+    width: 100%; 
     text-align: center;
     padding: 1em;
     z-index: 1000; /* Para garantir que o menu fique acima de outros elementos */
@@ -45,7 +143,7 @@ header img {
     font-size: 20px; /* Tamanho da fonte */
 }
 nav a {
-    color: #ffffff;/* COR DA LETRA DO MENU */
+    color: var(--cor-secundaria);/* COR DA LETRA DO MENU */
     text-decoration: none;
     padding: 0.5em 1em;
     margin: 0 1em;
@@ -56,63 +154,23 @@ nav a {
     top: -100px; /* Move o menu para cima, escondendo-o */
 }
 
-/* MENU */
-
-h1, p {
-    margin: 0; /* Remove as margens padrão para garantir o alinhamento correto */
-}
-
-h2 {
-    font-size: 30px; /* Tamanho da fonte do título das seções */
-}
-
-h3 {
-    font-size: 22px; /* Tamanho da fonte do título das seções */
-}
-
-h4 {
-    font-size: 17px; /* Tamanho da fonte do título das seções */
-}
-
-h3, h4 {
-    margin: 0; /* Remove as margens padrão para garantir o alinhamento correto */
-}
-
-section {
-    padding: 2em;
-    border-bottom: 5px solid #ffffff; /* Borda para separar as seções */
-    text-align: center; /* Centralizar o texto */
-}
-
-.container {
-    width: 90%;
-    margin: 0 auto; /* Centralizar o conteúdo */
-    padding: 20px;
-}
-
-/* Layout flexível dentro de uma seção */
-.section-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 
 
+                                /* ABA MINHA HISTORIA */
+/* ---------------------------------------------------------------------------------*/
 
-#about {
+#about  {
     text-align: center; /* Centraliza o texto dentro da seção */
     font-size: 18px; /* Ajusta o tamanho do texto */
     border-bottom: 5px solid #ffffff; /* Borda na parte inferior */
     padding: 2em 0; /* Adiciona padding apenas na parte superior e inferior */
 }
 
-.about-wrapper {
+.about-wrapper   {
     margin: 0 20%; /* Margens esquerda e direita para centralizar */
 }
 
-
-
-#about p {
+#about p    {
     text-align: justify; /* Alinha os parágrafos justificados */
     margin: 20px auto; /* Adiciona espaçamento entre os parágrafos e centraliza horizontalmente */
     text-indent: 1em; /* Destaca a primeira linha de cada parágrafo */
@@ -121,38 +179,15 @@ section {
 
 
 
+                                /* ABA QUALIFICACOES */
+/* ---------------------------------------------------------------------------------*/
 
-#contact {
-    background-color: #4b7679; /* Define o fundo como branco */
-    color: #ffffff; /* Define a cor do texto como preto */ 
-    height: 45px; /* Define a altura da seção */
+/* Estilo de botão ativo */
+button.botao-educacional.active, 
+button.botao-experiencia.active {
+    background-color: var(--cor-hover);
 }
 
-#contact h2 {
-    margin-top: -20px; /* Reduz a margem superior do título */
-}
-
-
-.item {
-    width: 48%; /* Dois itens por linha */
-    margin-bottom: 20px;
-}
-
-/* Media queries para ajustar o layout em tamanhos menores de tela */
-@media screen and (max-width: 768px) {
-    .item {
-        width: 100%; /* Um item por linha em telas menores */
-    }
-}
-
-footer {
-    background-color: #4b7679; /* Marrom claro */
-    color: #ffffff;
-    text-align: center;
-    padding: 1em;
-} 
-
-   /* SESSAO QUALIFICACOES */
 .qualificacoes-container p {
     text-align: justify; /* Alinha o texto à esquerda */
 }
@@ -160,21 +195,22 @@ footer {
 /* BOTOES QUALIFICACOES */
 .botao-educacional, .botao-experiencia {
     display: block;
-    width: 100%;
-    padding: 30px;
-    margin-bottom: 50px;
-    background-color: #f9f9fa; /* Cor do botão */
-    color: #000000; /* Cor do texto */
+    width: 60%;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: var(--cor-terciaria); /* Cor do botão */
+    color: var(--cor-primaria); /* Cor do texto */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 23px;
+    font-family: var(--fonte-primaria);
 }
 .qualificacoes-container {
-    width: 45%;
+    width: 40%;
     margin-top: 0px;
     margin-right: 1%;
-    padding-right: 20px;
+    padding-right: 50px;
     display: inline-block;
     vertical-align: top;
     text-align: justify;
@@ -182,23 +218,13 @@ footer {
     font-size: 20px;
 }
 
-
-
 .qualificacoes-container h3,.qualificacoes-container h4, .qualificacoes-container span, .qualificacoes-container li {
     text-align: center; /* Alinha o texto do resumo à esquerda */
 }
- 
-.botoes-container {
-display: flex; /* Torna o contêiner um flex container */
-justify-content: space-between; /* Distribui os itens horizontalmente */
-margin-bottom: 0px; /* Adiciona espaço abaixo dos botões */
-}
-.botoes-container button {
-margin-right: 20px; /* Ajuste a margem conforme necessário */
-}
 
 
-/* CERTIFICACOES E CURSOS */
+                                /* ABA CERTIFICACOES E CURSOS */
+/* ---------------------------------------------------------------------------------*/
 
 #certificados-cursos {
     display: flex;
@@ -257,11 +283,12 @@ margin-right: 20px; /* Ajuste a margem conforme necessário */
 .certificados button.ver-certificado, .cursos button.ver-certificado {
     font-size: 20px; /* Define o tamanho da fonte */
     padding: 10px 20px; /* Define o preenchimento interno do botão */
-    background-color: #ffffff; /* Define a cor de fundo do botão */
-    color: #000000; /* Define a cor do texto do botão */
+    background-color: var(--cor-terciaria); /* Cor do botão */
+    color: var(--cor-primaria); /* Cor do texto */
     border: none; /* Remove a borda do botão */
     cursor: pointer; /* Altera o cursor ao passar sobre o botão */
     border-radius: 5px; /* Adiciona bordas arredondadas nas laterais  */
+    
 }
 
 .certificados1, .cursos1 { 
@@ -288,5 +315,264 @@ margin-right: 20px; /* Ajuste a margem conforme necessário */
 .certificados:hover,
 .cursos:hover {
     animation: pulse 1s infinite;
+    
 }
 
+
+                                /* PROJETOS */
+/* ---------------------------------------------------------------------------------*/
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card {
+    position: relative;
+    width: 20%; /* Adjust to ensure 3 cards per line with some margin */
+    margin-bottom: 20px; /* Adjust as needed */
+    height: 200px;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s; /* Animação suave ao passar o mouse */ 
+    border: 1px solid #ddd; /* Opcional: borda para destacar os projetos */
+}
+
+ 
+.project-card:hover {
+    transform: translateY(-10px); /* Levanta a div ao passar o mouse */
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+ 
+}
+
+.project-card:hover .project-overlay   {
+    opacity: 1;
+}
+
+.project-overlay h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.project-overlay button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #fafafa;
+    color: rgb(7, 7, 7);
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px; /* Ajuste a margem entre os botões conforme necessário */
+    
+}
+
+.project-overlay button.ver-projetos {
+    font-size: 15px; /* Define o tamanho da fonte */
+    padding: 10px 20px; /* Define o preenchimento interno do botão */
+    background-color: var(--cor-terciaria); /* Cor do botão */
+    color: var(--cor-primaria); /* Cor do texto */
+    border: none; /* Remove a borda do botão */
+    cursor: pointer; /* Altera o cursor ao passar sobre o botão */
+    border-radius: 5px; /* Adiciona bordas arredondadas nas laterais  */
+    
+}
+
+
+
+
+ 
+ 
+                                /* ABA CONTATOS */
+/* ---------------------------------------------------------------------------------*/
+
+#contact {
+    background-color: var(--cor-primaria); /* Cor do botão */
+    color: var(--cor-secundaria); /* Cor do texto */
+    height: 45px; /* Define a altura da seção */
+}
+
+#contact h2 {
+    margin-top: -30px; /* Reduz a margem superior do título */
+}
+
+
+
+
+                                /* RODAPÉ */
+/* ---------------------------------------------------------------------------------*/
+
+footer {
+    background-color: var(--cor-primaria); /* Cor do botão */
+    color: var(--cor-secundaria); /* Cor do texto */
+    text-align: center;
+    padding: 1em;
+} 
+
+
+
+
+                                /* PROJETOS - PAGINA ANIMES */
+/* ---------------------------------------------------------------------------------*/
+
+
+/* Styles for the back button */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--cor-terciaria);
+    border: none;
+    color: var(--cor-primaria);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px; 
+}
+
+ 
+                                /* PROJETOS - PAGINA BOOTCAMP */
+/* ---------------------------------------------------------------------------------*/
+
+ 
+.about-wrapper  li { 
+    text-align: left; /* Centraliza o texto dentro da seção */ 
+    
+}
+
+
+
+.project-title {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:  #855e5e;
+    font-size: 24px;
+    z-index: 1;
+    text-align: top;
+    width: 100%;
+    background-color: #382929;
+}   
+
+/* Estilo para o modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--cor-primaria);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: var(--cor-primaria);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--cor-hover);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-button {
+    background-color: var(--cor-terciaria);
+    border: none;
+    color: var(--cor-primaria);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.modal-button:hover {
+    background-color: var(--cor-hover);
+}
+
+
+.project-overlay-bootcamp { 
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white; 
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex ;  
+    justify-content: space-evenly; /* Alinha o conteúdo centralizado */
+    align-items: center;
+ 
+}
+
+.project-card:hover .project-overlay-bootcamp   {
+    opacity: 1;
+}
+ 
+ 
+.project-overlay-bootcamp button.ver-projetos {
+    font-size: 15px; /* Define o tamanho da fonte */
+    padding: 10px 20px; /* Define o preenchimento interno do botão */
+    background-color: var(--cor-terciaria); /* Cor do botão */
+    color: var(--cor-primaria); /* Cor do texto */
+    border: none; /* Remove a borda do botão */
+    cursor: pointer; /* Altera o cursor ao passar sobre o botão */
+    border-radius: 5px; /* Adiciona bordas arredondadas nas laterais  */ 
+    margin: 15px; /* Ajusta a margem entre os botões conforme necessário */ 
+    
+}
+
+ 
