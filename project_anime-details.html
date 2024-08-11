@@ -13,12 +13,89 @@
     <button class="back-button" onclick="window.location.href='index.html'">Home</button>
     
     
-    <section>
-        <div class="project-details">
-            <h2>Detalhes do Projeto</h1>
-            <p>Em construção...</p>
+    <section id="about-anime">
+      
+        <h1> MyAnimeList DataSet </h1>
+
+        <h2> Objetivo do Projeto </h2>
+  
+        <p> 
+            Desenvolver um processo que inclua a extração de um conjunto de dados utilizando Python, o tratamento desses dados e seu armazenamento em um banco de dados relacional (Oracle), configurado para operar como um Data Lake. Em seguida, realizar o ETL (extração, transformação e carga) dos dados tratados, utilizando o Visual Studio para transferi-los para um banco de dados relacional (SQL Server), configurado como um banco de dados operacional (produção). Por fim, utilizar o Power BI para visualizar e analisar esses dados.
+        </p>  
+
+        <h2>Intuito do Projeto</h2>
+
+        <p>
+            Este projeto visa evidenciar minhas competências no desenvolvimento utilizando Python, bem como em linguagens PL-SQL e T-SQL, e na implementação de processos ETL com Visual Studio. Além disso, demonstra habilidades em visualização e análise de dados com Power BI. O objetivo é apresentar uma solução abrangente e integrada que cobre diversos aspectos do ciclo de vida dos dados.
+        </p>
+
+        <h2>Tecnologias Utilizadas</h2>
+
+        <p>
+            <ul>
+                <li><strong>Python:</strong> Para a integração da API com a fonte de dados, tratamento de dados e integração com o banco de dados.</li>
+                <li><strong>Banco de Dados Relacional:</strong> Oracle e SQL Server para armazenamento dos dados.</li>
+                <li><strong>ETL:</strong> Visual Studio</li>
+                <li><strong>Power BI:</strong> Para desenvolvimento do Dashboard e análise de dados.</li>
+            </ul>
+        </p>
+
+        <h2>Etapas do Projeto</h2>
+        
+        <h3>Extração de Dados com Python</h3> 
+        <p> 
+                Utilizar Python para conectar a API do Kaggle e utilizar o Dataset Anime Dataset with Reviews - MyAnimeList (<a href="https://www.kaggle.com/datasets/marlesson/myanimelist-dataset-animes-profiles-reviews">link aqui</a>) para realizar a inserção dos dados no banco de dados Oracle (configurado para operar como um Data Lake).
+        </p> 
+
+        <p>
+            Scripts utilizados nessa etapa: <a href="./Scripts_Base_DL">Python</a> 
+        </p>  
+     
+
+        <h3>Tratamento de Dados</h3>
+
+        <p>
+            Realizar a limpeza e transformação dos dados para garantir qualidade e consistência, incluindo a remoção de duplicatas, a normalização de nomes e a aplicação das formas normais do banco de dados, entre outras práticas. Essas ações deverão ser executadas por meio de objetos no banco de dados, com o objetivo de organizar e aplicar os tratamentos necessários aos dados.
+        </p>
+
+        <p>
+            Scripts utilizados nessa etapa: <a href="./Scripts_Base_DL">PL/SQL</a>
+        </p> 
+
+        <h3>ETL</h3>
+        
+        <p>
+            Criar tabelas no banco de dados SQL Server para armazenar informações que serão utilizadas pelo Power BI na análise dos dados e executar o processo de ETL (extração, transformação e carga) entre as bases de dados Oracle e SQL Server utilizando o Visual Studio.
+        </p>
+        <p>
+            Scripts utilizados nessa etapa: 
+            Projeto ETL > <a href="./ETL_SSIS/Animes">Link aqui</a> e Fluxograma ><a href="./ETL_SSIS/Fluxograma_ETL">Link aqui</a>
+        </p>  
+
+        <h3>Desenvolvimento de Relatórios no Power BI</h3>
+
+        <P>
+            Estabelecer a conexão do Power BI com o banco de dados relacional para importar os dados dos animes e desenvolver dashboards no Power BI para analisar e explorar os dados, o que pode incluir a criação de gráficos de barras, gráficos de dispersão, tabelas dinâmicas, entre outros recursos. 
+        </P>
+
+
+        <div class="project-details"> 
+            <h2>Dashboard</h2>
+            <div class="powerbi">
+               
+                <iframe title="Projeto_Animes" src="https://app.powerbi.com/view?r=eyJrIjoiZTkxODczMWQtNGJmZS00MDU0LTllZDktMzRiNzNkYTFkMjM1IiwidCI6IjcwNjBlYjFhLWZkY2MtNGVhOS05MTk4LWQ5N2FhNDkyZmJjMiJ9" allowFullScreen="true"></iframe>
+            </div>
             <!-- Adicione mais conteúdo de detalhes do projeto conforme necessário -->
         </div>
+ 
+
+        <h2>Análise de Dados e Insights</h2>
+
+        <p>
+            Aproveitar as funcionalidades de análise do Power BI para identificar padrões, tendências e insights sobre os animes, incluindo, por exemplo, a análise da popularidade, a distribuição por gênero e as correlações entre os animes. 
+        </p>
+
+        
     </section>
      
 </body>

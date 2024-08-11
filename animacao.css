@@ -25,6 +25,13 @@
     
 }
 
+hr {
+    border: 0; /* Remove a borda padrão */
+    height: 1px; /* Define a altura da linha */
+    background: linear-gradient(to right, transparent, #333, transparent); /* Cria um gradiente horizontal */
+    margin: 20px 0; /* Adiciona espaçamento acima e abaixo da linha */
+}
+
 h1 {
     font-size: 40px; /* Tamanho dentro dos botões qualificação */
     color: var(--cor-secundaria);
@@ -51,11 +58,36 @@ h1, p, h3, h4 {
     margin: 0; /* Remove as margens padrão para garantir o alinhamento correto */
 }
 
+                                /* COLOCA LINHA NAS SESSÕES */
+
+h2, h3 {
+    text-align: center;
+    position: relative; /* Necessário para o posicionamento dos pseudo-elementos */
+  }
+
+                                    /* COR DOS LINKS */
+
+  a {
+    color: #bd6144; /* Cor do link - alaranjado, por exemplo */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+  }
+
+  a:hover {
+    color: #aa3333; /* Cor do link quando o mouse está sobre ele */
+  }
+
+  a:visited {
+    color: #9e9e9e; /* Cor do link visitado */
+  }
+
+  a:active {
+    color: #9e4125; /* Cor do link quando clicado */
+  }
+
  
 
 section {
-    padding: 2em;
-    border-bottom: 5px solid #ffffff; /* Borda para separar as seções */
+    padding: 2em; 
     text-align: center; /* Centralizar o texto */
 }
 
@@ -161,8 +193,7 @@ nav a {
 
 #about  {
     text-align: center; /* Centraliza o texto dentro da seção */
-    font-size: 18px; /* Ajusta o tamanho do texto */
-    border-bottom: 5px solid #ffffff; /* Borda na parte inferior */
+    font-size: 18px; /* Ajusta o tamanho do texto */ 
     padding: 2em 0; /* Adiciona padding apenas na parte superior e inferior */
 }
 
@@ -195,7 +226,7 @@ button.botao-experiencia.active {
 /* BOTOES QUALIFICACOES */
 .botao-educacional, .botao-experiencia {
     display: block;
-    width: 60%;
+    width: 50%;
     padding: 20px;
     margin-bottom: 40px;
     background-color: var(--cor-terciaria); /* Cor do botão */
@@ -209,8 +240,8 @@ button.botao-experiencia.active {
 .qualificacoes-container {
     width: 40%;
     margin-top: 0px;
-    margin-right: 1%;
-    padding-right: 50px;
+    margin-right: 1,5%;
+    padding-right: 20px;
     display: inline-block;
     vertical-align: top;
     text-align: justify;
@@ -220,6 +251,7 @@ button.botao-experiencia.active {
 
 .qualificacoes-container h3,.qualificacoes-container h4, .qualificacoes-container span, .qualificacoes-container li {
     text-align: center; /* Alinha o texto do resumo à esquerda */
+    margin: 0px;
 }
 
 
@@ -231,6 +263,7 @@ button.botao-experiencia.active {
     flex-wrap: wrap; /* Adiciona quebra de linha conforme necessário */
     justify-content: space-around; /* Distribui os itens horizontalmente */
     margin-bottom: 50px; /* Adiciona espaço entre a seção de certificados e cursos */
+    margin-top: 100px; /* Adiciona espaço superior */
 }
 
 .certificados, .cursos {
@@ -268,17 +301,40 @@ button.botao-experiencia.active {
 }
 
     /*SETAS*/
-.certificados button.cert-prev, .certificados button.cert-next, .cursos button.curso-prev, .cursos button.curso-next {
+/* Estilo para as setas */
+.certificados button.cert-prev, 
+.certificados button.cert-next, 
+.cursos button.curso-prev, 
+.cursos button.curso-next {
     font-size: 40px; /* Tamanho da fonte das setas */
     color: #ffffff; /* Cor das setas */
-    cursor: pointer; /* Cursor do mouse em forma de mão ao passar sobre os botões */  
+    cursor: pointer; /* Cursor do mouse em forma de mão ao passar sobre os botões */
     border: none; /* Remove a borda dos botões */
-    background-color: transparent; /* Fundo transparente para os botões */ 
-    margin-right: 100px;
-    margin-left: 100px;
-        
-        
+    background-color: transparent; /* Fundo transparente para os botões */
+    margin: 0 20px; /* Ajusta o espaçamento lateral */
+    padding: 10px; /* Adiciona um pouco de preenchimento ao redor das setas */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra leve para destaque */
+    transition: color 0.3s, transform 0.3s; /* Adiciona transições suaves para cor e transformação */
 }
+
+/* Efeito hover para as setas */
+.certificados button.cert-prev:hover, 
+.certificados button.cert-next:hover, 
+.cursos button.curso-prev:hover, 
+.cursos button.curso-next:hover {
+    color: var(--cor-terciaria); /* Cor das setas ao passar o mouse */
+    transform: scale(1.1); /* Aumenta um pouco o tamanho das setas ao passar o mouse */
+}
+
+/* Efeito active para as setas */
+.certificados button.cert-prev:active, 
+.certificados button.cert-next:active, 
+.cursos button.curso-prev:active, 
+.cursos button.curso-next:active {
+    color: var(--cor-terciaria); /* Cor das setas quando clicadas */
+    transform: scale(1); /* Remove o aumento de tamanho ao clicar */
+}
+
 
 .certificados button.ver-certificado, .cursos button.ver-certificado {
     font-size: 20px; /* Define o tamanho da fonte */
@@ -321,6 +377,24 @@ button.botao-experiencia.active {
 
                                 /* PROJETOS */
 /* ---------------------------------------------------------------------------------*/
+
+/* Styles for the back button */ 
+.back-button {
+    position: fixed; /* Fixa o botão em relação à viewport */
+    top: 20px; /* Distância do topo da viewport */
+    left: 20px; /* Distância da borda esquerda da viewport */
+    background-color: var(--cor-terciaria); /* Cor de fundo do botão */
+    border: none; /* Remove a borda padrão */
+    color: var(--cor-primaria); /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    text-align: center; /* Alinha o texto ao centro */
+    text-decoration: none; /* Remove o sublinhado do texto, se houver */
+    font-size: 18px; /* Tamanho da fonte do texto */
+    cursor: pointer; /* Cursor do mouse em forma de mão ao passar sobre o botão */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+    border-radius: 5px; /* Bordas arredondadas do botão */
+}
+
 
 .project-container {
     display: flex;
@@ -415,16 +489,10 @@ button.botao-experiencia.active {
 /* ---------------------------------------------------------------------------------*/
 
 #contact {
-    background-color: var(--cor-primaria); /* Cor do botão */
-    color: var(--cor-secundaria); /* Cor do texto */
-    height: 45px; /* Define a altura da seção */
+    background-color: var(--cor-primaria); /* Cor do fundo da seção */
+    color: var(--cor-secundaria); /* Cor do texto */ 
+    margin: -20px; /* Ajuste a margem entre os botões conforme necessário */ 
 }
-
-#contact h2 {
-    margin-top: -30px; /* Reduz a margem superior do título */
-}
-
-
 
 
                                 /* RODAPÉ */
@@ -433,8 +501,8 @@ button.botao-experiencia.active {
 footer {
     background-color: var(--cor-primaria); /* Cor do botão */
     color: var(--cor-secundaria); /* Cor do texto */
-    text-align: center;
-    padding: 1em;
+    text-align: center; 
+    margin: -10px; /* Ajuste a margem entre os botões conforme necessário */ 
 } 
 
 
@@ -444,27 +512,116 @@ footer {
 /* ---------------------------------------------------------------------------------*/
 
 
-/* Styles for the back button */
-.back-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: var(--cor-terciaria);
+
+
+.powerbi  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px; /* Aumenta o padding ao redor do iframe */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 50px auto; /* Aumenta a margem para melhorar a centralização */
+    max-width: 1300px; /* Aumenta a largura máxima do contêiner */
+    width: 100%;
+    box-sizing: border-box;
+}
+.powerbi  iframe {
+    width: 100%;
+    height: 700px; /* Aumenta a altura do iframe */
     border: none;
-    color: var(--cor-primaria);
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    border-radius: 5px; 
+
 }
 
+#about-anime {
+    text-align: center; /* Centraliza o texto dentro da seção */
+    font-size: 18px; /* Ajusta o tamanho do texto */
+    border-bottom: 5px solid #ffffff; /* Borda na parte inferior */
+    padding: 2em 0; /* Adiciona padding apenas na parte superior e inferior */
+}
+
+#about-anime h1{
+    margin: 0 auto; /* Centraliza os elementos dentro da seção */
+    margin: 60px auto; /* Adiciona espaçamento vertical e centraliza horizontalmente */
+    font-size: 50px; /* Ajusta o tamanho do texto */
+}
+
+#about-anime h3{
+    margin: 0 auto; /* Centraliza os elementos dentro da seção */
+    margin: 30px auto; /* Adiciona espaçamento vertical e centraliza horizontalmente */
+    font-size: 25px; /* Ajusta o tamanho do texto */
+}
  
+#about-anime p , ul{
+    margin: 0 auto; /* Centraliza os elementos dentro da seção */
+    max-width: 80%; /* Define a largura máxima dos elementos */
+}
+
+#about-anime p {
+    text-align: justify; /* Alinha o texto dos parágrafos justificados */
+    margin: 20px auto; /* Adiciona espaçamento vertical e centraliza horizontalmente */ 
+    font-size: 20px; /* Ajusta o tamanho do texto */
+}
+
+
+  
+
+#about-anime  h2, h3 { 
+    margin: 70px 0; /* Espaçamento vertical entre os títulos */ 
+  }
+
+#about-anime  li {
+    text-align: left; 
+  }
+
+  h2::before,
+  h2::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    border-top: 1px solid #333; /* Linha sutil */
+    top: 50%;
+    transform: translateY(-50%); /* Centraliza verticalmente a linha em relação ao título */
+  }
+
+  h2::before {
+    left: 0;
+    margin-left: 0;
+  }
+
+  h2::after {
+    right: 0;
+    margin-right: 0;
+  }
+ 
+  h2::before {
+    top: -10px; /* Ajusta a linha acima do título */
+  }
+
+  h2::after {
+    top: 100%; /* Posiciona a linha abaixo do título */
+    margin-top: 10px; /* Adiciona espaçamento entre o título e a linha abaixo */
+  }
+
+
+
+
                                 /* PROJETOS - PAGINA BOOTCAMP */
 /* ---------------------------------------------------------------------------------*/
 
+
+.project-card-bootcamp { /*conteiner */
+    position: relative;
+    width: 20%; /* Adjust to ensure 3 cards per line with some margin */ 
+    height: 400px;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s; /* Animação suave ao passar o mouse */ 
+    border: 1px solid #ddd; /* Opcional: borda para destacar os projetos */
+}
  
 .about-wrapper  li { 
     text-align: left; /* Centraliza o texto dentro da seção */ 
@@ -472,96 +629,47 @@ footer {
 }
 
 
-
-.project-title {
+.project-title { /* Centraliza o titulo dentro da box dos desafios */ 
     position: absolute;
-    top: 10%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color:  #855e5e;
+    color:  var(--cor-terciaria);
     font-size: 24px;
     z-index: 1;
     text-align: top;
     width: 100%;
-    background-color: #382929;
+    background-color: var(--cor-primaria);
 }   
 
-/* Estilo para o modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: var(--cor-primaria);
-    background-color: rgba(0, 0, 0, 0.4);
-}
+   
 
-.modal-content {
-    background-color: var(--cor-primaria);
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    text-align: center;
-    border-radius: 8px;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: var(--cor-hover);
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.modal-button {
-    background-color: var(--cor-terciaria);
-    border: none;
-    color: var(--cor-primaria);
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 5px 2px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border-radius: 5px;
-}
-
-.modal-button:hover {
-    background-color: var(--cor-hover);
-}
-
-
-.project-overlay-bootcamp { 
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    color: white; 
-    opacity: 0;
-    transition: opacity 0.3s;
-    display: flex ;  
-    justify-content: space-evenly; /* Alinha o conteúdo centralizado */
-    align-items: center;
- 
-}
-
-.project-card:hover .project-overlay-bootcamp   {
+.project-card:hover .project-overlay-bootcamp {
     opacity: 1;
 }
- 
+
+.project-overlay-bootcamp {
+    height: 100%; /* Ajuste conforme necessário */
+    width: 100%;  /* Ajuste conforme necessário */
+    background: var(--cor-primaria);
+    color: white;  
+    transition: opacity 0.3s;
+    display: flex;  
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+    justify-content: flex-end; /* Posiciona os itens no fundo do contêiner */
+    align-items: center; /* Centraliza horizontalmente os itens */
+    padding: 20px; /* Adiciona espaçamento interno */
+    box-sizing: border-box; /* Inclui padding nas dimensões totais */
+    position: relative; /* Garante que o posicionamento dos botões seja relativo ao contêiner */
+}
+
+
+.button-container {
+    display: flex; /* Adiciona flexbox */
+    flex-direction: row; /* Organiza os botões lado a lado */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    width: 100%; /* Garante que o contêiner use a largura total disponível */
+}
  
 .project-overlay-bootcamp button.ver-projetos {
     font-size: 15px; /* Define o tamanho da fonte */
@@ -570,9 +678,13 @@ footer {
     color: var(--cor-primaria); /* Cor do texto */
     border: none; /* Remove a borda do botão */
     cursor: pointer; /* Altera o cursor ao passar sobre o botão */
-    border-radius: 5px; /* Adiciona bordas arredondadas nas laterais  */ 
-    margin: 15px; /* Ajusta a margem entre os botões conforme necessário */ 
-    
+    border-radius: 5px; /* Adiciona bordas arredondadas nas laterais */
+    transition: opacity 0.3s;   
+    margin: 5px; /* Ajusta a margem entre os botões conforme necessário */  
 }
 
- 
+
+
+
+
+
