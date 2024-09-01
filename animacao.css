@@ -148,10 +148,11 @@ header {
 
 /* TAMANHO DA FOTO DE PERFIL */
 header img { 
-    border-radius: 50%; /* Adiciona borda arredondada à imagem */
+    border-radius: 25%; /* Adiciona borda arredondada à imagem */
     max-width: 300px; /* Largura máxima da imagem (dobro) */
     max-height: 300px; /* Altura máxima da imagem (dobro) */
     margin-bottom: 20px; /* Adiciona espaço abaixo da imagem */
+    margin-top: 20px; /* Adiciona espaço abaixo da imagem */
     display: flex;
     flex-wrap: wrap;
 }
