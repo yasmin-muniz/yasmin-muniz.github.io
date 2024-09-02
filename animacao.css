@@ -1,88 +1,97 @@
 
                                 /*BACKGROUND*/
  /* ---------------------------------------------------------------------------------*/                               
- @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Playwrite+IT+Moderna:wght@100..400&family=Yeseva+One&display=swap" rel="stylesheet');
+ /* ---------------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;700&family=Yeseva+One&display=swap');
 
- 
- :root {
+:root {
     --cor-primaria: #1a1a1a;
     --cor-secundaria: #b1b3b3;
     --cor-terciaria: #e9e9e9a9;
     --cor-hover: #6c6d6d;
 
-    --fonte-primaria: 'Jura', normal;
-    --fonte-secundaria: 'Jura', normal;
+    --fonte-primaria: 'Jura', sans-serif;
+    --fonte-secundaria: 'Jura', sans-serif;
 }
- 
 
- body {
+body {
     font-family: var(--fonte-secundaria);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: var(--cor-primaria);
     color: var(--cor-terciaria);
-    
 }
 
 hr {
-    border: 0; /* Remove a borda padrão */
-    height: 1px; /* Define a altura da linha */
-    background: linear-gradient(to right, transparent, #333, transparent); /* Cria um gradiente horizontal */
-    margin: 20px 0; /* Adiciona espaçamento acima e abaixo da linha */
+    border: 0; 
+    height: 1px; 
+    background: linear-gradient(to right, transparent, #333, transparent); 
+    margin: 20px 0; 
 }
 
 h1 {
-    font-size: 40px; /* Tamanho dentro dos botões qualificação */
+    font-size: 40px;
     color: var(--cor-secundaria);
-
 }
 
 h2 {
-    font-size: 35px; /* Tamanho da fonte do título das seções */
+    font-size: 35px;
     font-family: var(--fonte-primaria);
     color: var(--cor-secundaria);
 }
 
 h3 {
-    font-size: 20px; /* Tamanho dentro dos botões qualificação */
+    font-size: 20px;
     font-family: var(--fonte-primaria);
     color: var(--cor-secundaria);
 }
 
 h4 {
-    font-size: 17px; /* Tamanho dentro dos botões qualificação  */
+    font-size: 17px;
 }
 
 h1, p, h3, h4 {
-    margin: 0; /* Remove as margens padrão para garantir o alinhamento correto */
+    margin: 0; 
 }
 
-                                /* COLOCA LINHA NAS SESSÕES */
-
+/* COLOCA LINHA NAS SESSÕES */
 h2, h3 {
     text-align: center;
-    position: relative; /* Necessário para o posicionamento dos pseudo-elementos */
-  }
+    position: relative;
+}
 
-                                    /* COR DOS LINKS */
+/* COR DOS LINKS */
+a {
+    color: #bd6144;
+    text-decoration: none; 
+}
 
-  a {
-    color: #bd6144; /* Cor do link - alaranjado, por exemplo */
-    text-decoration: none; /* Remove o sublinhado padrão dos links */
-  }
+a:hover {
+    color: #aa3333;
+}
 
-  a:hover {
-    color: #aa3333; /* Cor do link quando o mouse está sobre ele */
-  }
+a:active {
+    color: #9e4125;
+}
 
-  a:active {
-    color: #9e4125; /* Cor do link quando clicado */
-  }
- 
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+}
 
 
-  
 section {
     padding: 2em; 
     text-align: center; /* Centralizar o texto */
@@ -117,22 +126,23 @@ section {
 button:hover {
     background-color: var(--cor-hover);
 }
- 
+
 .botoes-container {
     display: flex; /* Torna o contêiner um flex container */
     justify-content: space-between; /* Distribui os itens horizontalmente */
     margin-bottom: 0px; /* Adiciona espaço abaixo dos botões */
-    }
-
+}
 
 .botoes-container button {
     margin-right: 20px; /* Ajuste a margem conforme necessário */
-    }
+}
 
+.certificados button.ver-certificado:hover, 
+.cursos button.ver-certificado:hover, 
+.project-overlay-bootcamp button.ver-projetos:hover {
+    background-color: var(--cor-hover); /* Cor de fundo ao passar o mouse para botões específicos */
+}
 
-.certificados button.ver-certificado:hover , .cursos button.ver-certificado:hover, .project-overlay-bootcamp button.ver-projetos:hover, .project-overlay button.ver-projetos:hover  {
-        background-color: var(--cor-hover);
-    }
 
                                 /*FOTO DE PERFIL E NOME */
 /* ---------------------------------------------------------------------------------*/      
@@ -149,12 +159,11 @@ header {
 /* TAMANHO DA FOTO DE PERFIL */
 header img { 
     border-radius: 25%; /* Adiciona borda arredondada à imagem */
-    max-width: 300px; /* Largura máxima da imagem (dobro) */
-    max-height: 300px; /* Altura máxima da imagem (dobro) */
+    max-width: 300px; /* Largura máxima da imagem */
+    max-height: 300px; /* Altura máxima da imagem */
     margin-bottom: 20px; /* Adiciona espaço abaixo da imagem */
-    margin-top: 20px; /* Adiciona espaço abaixo da imagem */
-    display: flex;
-    flex-wrap: wrap;
+    margin-top: 20px; /* Adiciona espaço acima da imagem */
+    display: block; /* Garante que a imagem seja um bloco */
 }
 
                                 /* TOPO COM AS ABAS DA PAGINA */
@@ -167,48 +176,61 @@ header img {
     width: 100%; 
     text-align: center;
     padding: 1em;
-    z-index: 1000; /* Para garantir que o menu fique acima de outros elementos */
+    z-index: 1000; /* Garante que o menu fique acima de outros elementos */
     transition: top 0.3s; /* Adiciona uma transição suave */
     border-bottom: 2px solid white; /* Adiciona uma borda branca na parte inferior */
     font-size: 20px; /* Tamanho da fonte */
 }
+
 nav a {
-    color: var(--cor-secundaria);/* COR DA LETRA DO MENU */
+    color: var(--cor-secundaria); /* Cor da letra do menu */
     text-decoration: none;
     padding: 0.5em 1em;
     margin: 0 1em;
 }
 
-
 #navbar.hidden {
     top: -100px; /* Move o menu para cima, escondendo-o */
 }
 
-
-
                                 /* ABA MINHA HISTORIA */
 /* ---------------------------------------------------------------------------------*/
 
-#about  {
+#about {
     text-align: center; /* Centraliza o texto dentro da seção */
-    font-size: 18px; /* Ajusta o tamanho do texto */ 
+    font-size: 18px; /* Ajusta o tamanho do texto */
     padding: 2em 0; /* Adiciona padding apenas na parte superior e inferior */
 }
 
-.about-wrapper   {
+.about-wrapper {
     margin: 0 20%; /* Margens esquerda e direita para centralizar */
 }
 
-#about p    {
+#about p {
     text-align: justify; /* Alinha os parágrafos justificados */
     margin: 20px auto; /* Adiciona espaçamento entre os parágrafos e centraliza horizontalmente */
     text-indent: 1em; /* Destaca a primeira linha de cada parágrafo */
     font-size: 20px; /* Ajusta o tamanho do texto */
 }
 
+/* Ajustes de responsividade para telas menores */
+@media screen and (max-width: 768px) {
+    .about-wrapper {
+        margin: 0 10%; /* Reduz as margens laterais em telas menores */
+    }
+
+    header img {
+        max-width: 200px; /* Ajusta a largura máxima da imagem em telas menores */
+        max-height: 200px; /* Ajusta a altura máxima da imagem em telas menores */
+    }
+
+    #navbar {
+        font-size: 18px; /* Reduz o tamanho da fonte do menu em telas menores */
+    }
+}
 
 
-                                /* ABA QUALIFICACOES */
+/* ABA QUALIFICACOES */
 /* ---------------------------------------------------------------------------------*/
 
 /* Estilo de botão ativo */
@@ -218,9 +240,9 @@ button.botao-experiencia.active {
 }
 
 .qualificacoes-container p {
-    text-align: justify; /* Alinha o texto à esquerda */
+    text-align: justify; /* Alinha o texto justificado */
 }
- 
+
 /* BOTOES QUALIFICACOES */
 .botao-educacional, .botao-experiencia {
     display: block;
@@ -235,10 +257,12 @@ button.botao-experiencia.active {
     font-size: 23px;
     font-family: var(--fonte-primaria);
 }
+
+/* Container de Qualificações */
 .qualificacoes-container {
     width: 40%;
-    margin-top: 0px;
-    margin-right: 1,5%;
+    margin-top: 0;
+    margin-right: 1.5%;
     padding-right: 20px;
     display: inline-block;
     vertical-align: top;
@@ -247,13 +271,27 @@ button.botao-experiencia.active {
     font-size: 20px;
 }
 
-.qualificacoes-container h3,.qualificacoes-container h4, .qualificacoes-container span, .qualificacoes-container li {
-    text-align: center; /* Alinha o texto do resumo à esquerda */
-    margin: 0px;
+.qualificacoes-container h3,
+.qualificacoes-container h4, 
+.qualificacoes-container span, 
+.qualificacoes-container li {
+    text-align: center; /* Centraliza o texto */
+    margin: 0;
 }
 
+/* Ajustes de responsividade */
+@media screen and (max-width: 768px) {
+    .botao-educacional, .botao-experiencia {
+        width: 100%; /* Botões ocupam toda a largura em telas menores */
+    }
 
-                                /* ABA CERTIFICACOES E CURSOS */
+    .qualificacoes-container {
+        width: 100%; /* O container ocupa 100% da largura em telas menores */
+        padding-right: 0; /* Remove o padding lateral em telas menores */
+    }
+}
+
+/* ABA CERTIFICACOES E CURSOS */
 /* ---------------------------------------------------------------------------------*/
 
 #certificados-cursos {
@@ -265,7 +303,7 @@ button.botao-experiencia.active {
 }
 
 .certificados, .cursos {
-    display: flex; /* Adicionado para manter os botões e o texto alinhados verticalmente */
+    display: flex; /* Adiciona alinhamento vertical */
     flex-direction: column; /* Organiza os elementos em coluna */
     align-items: center; /* Centraliza horizontalmente */
     border: 5px solid transparent;
@@ -278,27 +316,26 @@ button.botao-experiencia.active {
     text-align: center; /* Centraliza o conteúdo */
 }
 
-
+/* Títulos e textos */
 .certificados h3, 
 .cursos h3 {
     font-size: 25px; /* Tamanho da fonte */
     margin: 0; /* Remove as margens padrão */
-    margin-bottom: 30px; /* Defina o valor desejado para a margem inferior */ 
+    margin-bottom: 30px; /* Margem inferior */
 }
 
 .certificado h4,
 .curso h4 {
     font-size: 18px; /* Tamanho da fonte */
-    margin-bottom: 5px; /* Adiciona espaço entre o título e o texto */
-    /* Largura removida para permitir que o título seja responsivo */
+    margin-bottom: 5px; /* Espaço entre o título e o texto */
 }
 
 .certificado p,
 .curso p {
-    margin-bottom: 30px; /* Adiciona espaço entre o texto e os botões */ 
+    margin-bottom: 30px; /* Espaço entre o texto e os botões */ 
 }
 
-    /*SETAS*/
+/* SETAS */
 /* Estilo para as setas */
 .certificados button.cert-prev, 
 .certificados button.cert-next, 
@@ -321,7 +358,7 @@ button.botao-experiencia.active {
 .cursos button.curso-prev:hover, 
 .cursos button.curso-next:hover {
     color: var(--cor-terciaria); /* Cor das setas ao passar o mouse */
-    transform: scale(1.1); /* Aumenta um pouco o tamanho das setas ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho das setas ao passar o mouse */
 }
 
 /* Efeito active para as setas */
@@ -333,22 +370,22 @@ button.botao-experiencia.active {
     transform: scale(1); /* Remove o aumento de tamanho ao clicar */
 }
 
-
-.certificados button.ver-certificado, .cursos button.ver-certificado {
+.certificados button.ver-certificado, 
+.cursos button.ver-certificado {
     font-size: 20px; /* Define o tamanho da fonte */
     padding: 10px 20px; /* Define o preenchimento interno do botão */
     background-color: var(--cor-terciaria); /* Cor do botão */
     color: var(--cor-primaria); /* Cor do texto */
     border: none; /* Remove a borda do botão */
     cursor: pointer; /* Altera o cursor ao passar sobre o botão */
-    border-radius: 5px; /* Adiciona bordas arredondadas nas laterais  */
-    
+    border-radius: 5px; /* Adiciona bordas arredondadas */
 }
 
-.certificados1, .cursos1 { 
+/* Adiciona exibição flexível para botões e texto dentro dos containers */
+.certificados1, 
+.cursos1 { 
     display: flex;     
 }
-
 
 /* FAZER A BORDA FICAR RGB */
 @keyframes pulse {
@@ -368,15 +405,13 @@ button.botao-experiencia.active {
 
 .certificados:hover,
 .cursos:hover {
-    animation: pulse 1s infinite;
-    
+    animation: pulse 1s infinite; /* Animação de borda RGB ao passar o mouse */
 }
 
-
-                                /* PROJETOS */
+/* PROJETOS */
 /* ---------------------------------------------------------------------------------*/
 
-/* Styles for the back button */ 
+/* Styles for the back button */
 .back-button {
     position: fixed; /* Fixa o botão em relação à viewport */
     top: 20px; /* Distância do topo da viewport */
@@ -393,126 +428,130 @@ button.botao-experiencia.active {
     border-radius: 5px; /* Bordas arredondadas do botão */
 }
 
-
+/* Container para os projetos */
 .project-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Centraliza os cartões de projeto horizontalmente */
+    align-items: center; /* Alinha os cartões de projeto verticalmente */ 
 }
 
+/* Estilo para cada cartão de projeto */
 .project-card {
     position: relative;
-    width: 20%; /* Adjust to ensure 3 cards per line with some margin */
-    margin-bottom: 20px; /* Adjust as needed */
-    height: 200px;
+    width: 20%; /* Ajusta a largura para 3 cartões por linha */ 
+    height: 200px; /* Altura fixa para os cartões */
     margin: 10px;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     transition: transform 0.3s; /* Animação suave ao passar o mouse */ 
     border: 1px solid #ddd; /* Opcional: borda para destacar os projetos */
-}
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+} 
 
- 
+/* Efeito hover para o cartão de projeto */
 .project-card:hover {
-    transform: translateY(-10px); /* Levanta a div ao passar o mouse */
+    transform: translateY(-10px); /* Levanta o cartão ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
 }
 
+/* Estilo para a imagem do projeto */
 .project-image {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: cover; /* Garante que a imagem cubra o cartão */
+    display: block; /* Remove o espaço abaixo da imagem */
 }
 
+.project-image-container {
+    width: 100%;
+    height: 70%; /* Ajuste conforme necessário */
+    overflow: hidden;
+}
 
-
+/* Sobreposição do projeto */
 .project-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7); /* Fundo escuro com opacidade */
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: opacity 0.3s;
- 
+    transition: opacity 0.3s; /* Transição suave para a visibilidade */
 }
 
-.project-card:hover .project-overlay   {
-    opacity: 1;
+/* Efeito hover para a sobreposição do projeto */
+.project-card:hover .project-overlay {
+    opacity: 1; /* Torna a sobreposição visível ao passar o mouse */
 }
 
+/* Estilo para o título na sobreposição do projeto */
 .project-overlay h2 {
     margin-bottom: 10px;
     font-size: 24px;
     text-align: center;
 }
 
+/* Estilo para os botões na sobreposição do projeto */
 .project-overlay button {
     padding: 10px 20px;
     border: none;
-    background-color: #fafafa;
+    background-color: #fafafa; /* Cor de fundo padrão para os botões */
     color: rgb(7, 7, 7);
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin: 5px; /* Ajuste a margem entre os botões conforme necessário */
-    
+    margin: 5px; /* Margem entre os botões */
 }
 
+/* Estilo específico para o botão "Ver Projetos" */
 .project-overlay button.ver-projetos {
-    font-size: 15px; /* Define o tamanho da fonte */
-    padding: 10px 20px; /* Define o preenchimento interno do botão */
+    font-size: 15px; /* Tamanho da fonte */
+    padding: 10px 20px; /* Preenchimento interno do botão */
     background-color: var(--cor-terciaria); /* Cor do botão */
     color: var(--cor-primaria); /* Cor do texto */
     border: none; /* Remove a borda do botão */
     cursor: pointer; /* Altera o cursor ao passar sobre o botão */
-    border-radius: 5px; /* Adiciona bordas arredondadas nas laterais  */
-    
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: opacity 0.3s;   
+    margin: 5px; /* Ajusta a margem entre os botões conforme necessário */  
 }
 
-
-
-
- 
- 
-                                /* ABA CONTATOS */
+ /* ABA CONTATOS */
 /* ---------------------------------------------------------------------------------*/
 
 #contact {
     background-color: var(--cor-primaria); /* Cor do fundo da seção */
     color: var(--cor-secundaria); /* Cor do texto */ 
-    margin: -20px; /* Ajuste a margem entre os botões conforme necessário */ 
+    margin: -20px; /* Ajuste a margem conforme necessário */
+    padding: 20px; /* Adiciona padding para melhorar o espaçamento interno */
+    text-align: center; /* Centraliza o texto */
 }
 
-
-                                /* RODAPÉ */
+/* RODAPÉ */
 /* ---------------------------------------------------------------------------------*/
 
 footer {
-    background-color: var(--cor-primaria); /* Cor do botão */
+    background-color: var(--cor-primaria); /* Cor do fundo do rodapé */
     color: var(--cor-secundaria); /* Cor do texto */
-    text-align: center; 
-    margin: -10px; /* Ajuste a margem entre os botões conforme necessário */ 
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Adiciona padding para o rodapé */
+    margin: -10px; /* Ajuste a margem conforme necessário */
 } 
 
-
-
-
-                                /* PROJETOS - PAGINA ANIMES */
+/* PROJETOS - PAGINA ANIMES */
 /* ---------------------------------------------------------------------------------*/
 
-
-
-
-.powerbi  {
+.powerbi {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -525,93 +564,84 @@ footer {
     width: 100%;
     box-sizing: border-box;
 }
-.powerbi  iframe {
+
+.powerbi iframe {
     width: 100%;
     height: 700px; /* Aumenta a altura do iframe */
     border: none;
-
 }
 
 #about-anime {
     text-align: center; /* Centraliza o texto dentro da seção */
     font-size: 18px; /* Ajusta o tamanho do texto */
     border-bottom: 5px solid #ffffff; /* Borda na parte inferior */
-    padding: 2em 0; /* Adiciona padding apenas na parte superior e inferior */
+    padding: 2em 0; /* Adiciona padding na parte superior e inferior */
 }
 
-#about-anime h1{
-    margin: 0 auto; /* Centraliza os elementos dentro da seção */
+#about-anime h1 {
     margin: 60px auto; /* Adiciona espaçamento vertical e centraliza horizontalmente */
     font-size: 50px; /* Ajusta o tamanho do texto */
 }
 
-#about-anime h3{
-    margin: 0 auto; /* Centraliza os elementos dentro da seção */
+#about-anime h3 {
     margin: 30px auto; /* Adiciona espaçamento vertical e centraliza horizontalmente */
     font-size: 25px; /* Ajusta o tamanho do texto */
 }
- 
-#about-anime p , ul{
+
+#about-anime p, ul {
     margin: 0 auto; /* Centraliza os elementos dentro da seção */
     max-width: 80%; /* Define a largura máxima dos elementos */
 }
 
 #about-anime p {
     text-align: justify; /* Alinha o texto dos parágrafos justificados */
-    margin: 20px auto; /* Adiciona espaçamento vertical e centraliza horizontalmente */ 
+    margin: 20px auto; /* Adiciona espaçamento vertical e centraliza horizontalmente */
     font-size: 20px; /* Ajusta o tamanho do texto */
-}
-
-
+ }
   
 
-#about-anime  h2, h3 { 
+/* ABA ANIME - TITULOS E LISTAS */
+/* ---------------------------------------------------------------------------------*/
+
+#about-anime h2, #about-anime h3 { 
     margin: 70px 0; /* Espaçamento vertical entre os títulos */ 
-  }
+    position: relative; /* Necessário para posicionar as linhas acima e abaixo dos títulos */
+}
 
-#about-anime  li {
-    text-align: left; 
-  }
+#about-anime li {
+    text-align: left; /* Alinha o texto das listas à esquerda */
+}
 
-  h2::before,
-  h2::after {
+/* Estilo para linhas acima e abaixo dos títulos h2 */
+h2::before,
+h2::after {
     content: "";
     position: absolute;
     width: 50%;
     border-top: 1px solid #333; /* Linha sutil */
     top: 50%;
     transform: translateY(-50%); /* Centraliza verticalmente a linha em relação ao título */
-  }
+}
 
-  h2::before {
+h2::before {
     left: 0;
     margin-left: 0;
-  }
+    top: -10px; /* Ajusta a linha acima do título */
+}
 
-  h2::after {
+h2::after {
     right: 0;
     margin-right: 0;
-  }
- 
-  h2::before {
-    top: -10px; /* Ajusta a linha acima do título */
-  }
-
-  h2::after {
     top: 100%; /* Posiciona a linha abaixo do título */
     margin-top: 10px; /* Adiciona espaçamento entre o título e a linha abaixo */
-  }
+}
 
-
-
-
-                                /* PROJETOS - PAGINA BOOTCAMP */
+/* PROJETOS - PAGINA BOOTCAMP */
 /* ---------------------------------------------------------------------------------*/
 
-
-.project-card-bootcamp { /*conteiner */
+.project-card-bootcamp { /* Contêiner dos cartões de projeto */
     position: relative;
-    width: 20%; /* Adjust to ensure 3 cards per line with some margin */ 
+    width: 20%; /* Ajusta para garantir 3 cartões por linha com alguma margem */ 
     height: 400px;
     margin: 10px;
     overflow: hidden;
@@ -620,35 +650,31 @@ footer {
     transition: transform 0.3s; /* Animação suave ao passar o mouse */ 
     border: 1px solid #ddd; /* Opcional: borda para destacar os projetos */
 }
- 
-.about-wrapper  li { 
-    text-align: left; /* Centraliza o texto dentro da seção */ 
-    
+
+.about-wrapper li { 
+    text-align: left; /* Alinha o texto das listas à esquerda */
 }
 
-
-.project-title { /* Centraliza o titulo dentro da box dos desafios */ 
+.project-title { /* Centraliza o título dentro da caixa dos desafios */ 
     position: absolute;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color:  var(--cor-terciaria);
+    color: var(--cor-terciaria);
     font-size: 24px;
     z-index: 1;
-    text-align: top;
+    text-align: center; /* Corrige o alinhamento do texto */
     width: 100%;
     background-color: var(--cor-primaria);
 }   
-
-   
 
 .project-card:hover .project-overlay-bootcamp {
     opacity: 1;
 }
 
 .project-overlay-bootcamp {
-    height: 100%; /* Ajuste conforme necessário */
-    width: 100%;  /* Ajuste conforme necessário */
+    height: 100%; /* Ajusta conforme necessário */
+    width: 100%;  /* Ajusta conforme necessário */
     background: var(--cor-primaria);
     color: white;  
     transition: opacity 0.3s;
@@ -661,14 +687,13 @@ footer {
     position: relative; /* Garante que o posicionamento dos botões seja relativo ao contêiner */
 }
 
-
 .button-container {
     display: flex; /* Adiciona flexbox */
     flex-direction: row; /* Organiza os botões lado a lado */
     justify-content: center; /* Centraliza os botões horizontalmente */
     width: 100%; /* Garante que o contêiner use a largura total disponível */
 }
- 
+
 .project-overlay-bootcamp button.ver-projetos {
     font-size: 15px; /* Define o tamanho da fonte */
     padding: 10px 20px; /* Define o preenchimento interno do botão */
@@ -680,9 +705,3 @@ footer {
     transition: opacity 0.3s;   
     margin: 5px; /* Ajusta a margem entre os botões conforme necessário */  
 }
-
-
-
-
-
-
