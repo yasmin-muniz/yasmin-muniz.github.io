@@ -5,9 +5,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;700&family=Yeseva+One&display=swap');
 
 :root {
-    --cor-primaria: #1a1a1a;
-    --cor-secundaria: #b1b3b3;
-    --cor-terciaria: #e9e9e9a9;
+    --cor-primaria: #062f42;
+    --cor-secundaria: #c0bebe;
+    --cor-terciaria: #ffffffa9;
     --cor-hover: #6c6d6d;
 
     --fonte-primaria: 'Jura', sans-serif;
@@ -158,7 +158,7 @@ header {
 
 /* TAMANHO DA FOTO DE PERFIL */
 header img { 
-    border-radius: 25%; /* Adiciona borda arredondada à imagem */
+    border-radius: 50%; /* Adiciona borda arredondada à imagem */
     max-width: 300px; /* Largura máxima da imagem */
     max-height: 300px; /* Altura máxima da imagem */
     margin-bottom: 20px; /* Adiciona espaço abaixo da imagem */
@@ -179,7 +179,10 @@ header img {
     z-index: 1000; /* Garante que o menu fique acima de outros elementos */
     transition: top 0.3s; /* Adiciona uma transição suave */
     border-bottom: 2px solid white; /* Adiciona uma borda branca na parte inferior */
-    font-size: 20px; /* Tamanho da fonte */
+    font-size: 20px; /* Tamanho da fonte */ 
+    background-color: var(--cor-primaria); /* preto sólido */
+    font-weight: bold;
+
 }
 
 nav a {
@@ -237,6 +240,7 @@ nav a {
 button.botao-educacional.active, 
 button.botao-experiencia.active {
     background-color: var(--cor-hover);
+    
 }
 
 .qualificacoes-container p {
@@ -256,6 +260,8 @@ button.botao-experiencia.active {
     cursor: pointer;
     font-size: 23px;
     font-family: var(--fonte-primaria);
+    font-weight: bold;
+
 }
 
 /* Container de Qualificações */
